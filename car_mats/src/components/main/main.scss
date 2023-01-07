@@ -1,0 +1,193 @@
+.main {
+    position: relative;
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        padding: 47px 122px 34px;
+    }
+    &__logo {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        gap: 11px;
+        &_name {
+            font-size: 36px;
+            font-weight: 900;
+            font-style: italic;
+            color: black;
+        }
+    }
+    &__menu {
+        &-container {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+            font-size: 18px;
+
+            a {
+                color: #737373;
+                text-decoration: none;
+            }
+        }
+    }
+    &__block {
+        height: 530px;
+        padding: 0 122px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-image: url("/img/main/bg.svg");
+        background-repeat: no-repeat;
+        background-position: right;
+        .title {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+            &__header {
+                width: 635px;
+                font-size: 50px;
+                line-height: 59px;
+                font-weight: bold;
+                margin: 0;
+            }
+            &__sub-title {
+                font-size: 24px;
+            }
+            &__order-btn {
+                position: relative;
+                z-index: 1;
+                width: 179px;
+                font-size: 20px;
+                font-weight: bold;
+                color: white;
+                padding: 15px 0;
+                background: linear-gradient(
+                    95.2deg,
+                    #b90160 2.23%,
+                    #2e3192 99.51%
+                );
+                border-radius: 7px;
+                border: none;
+                cursor: pointer;
+            }
+        }
+    }
+    &__anim{
+        position: absolute;
+        top: 150px;
+        animation: rotate 20s linear infinite ;
+        @keyframes rotate {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+
+            }
+        }
+        @keyframes scale {
+            from{
+                transform: scale(1);
+            }
+            to{
+                transform: scale(2);
+
+            }
+        }
+    }
+}
+
+.main{
+    @media (max-width: 1410px){
+        &__block{
+            .title{
+                &__header{
+                    width: 415px;
+                }
+            }
+        }
+    }
+    @media (max-width: 1290px){
+        &__anim{
+            display: none;
+        }
+    }
+    @media (max-width: 1195px){
+        &__block{
+            .title{
+                &__header{
+                    font-size: 40px;
+                    width: 340px;
+                }
+            }
+            &_image{
+                img{
+                    width: 368px;
+                }
+            }
+        }
+    }
+    @media (max-width: 1024px){
+        &__menu {
+            &-container{
+                font-size: 15px;
+                gap: 10px;
+            }
+        }
+        &__block{
+            padding: 0 64px;
+            overflow-x: hidden;
+        }
+    }
+    @media (max-width: 768px){
+        &__menu {
+            &-container{
+                display: none;
+            }
+        }
+    }
+    @media (max-width: 730px){
+        &__header{
+            padding: 26px 68px 15px;
+        }
+        &__block{
+            justify-content: center;
+            align-items: start;
+            height: 256px;
+            background-position: center;
+            background-size: contain;
+            .title{
+                text-align: center;
+                align-items: center;
+                &__header{
+                    line-height: 25px;
+                    font-size: 25px;
+                    width: 300px;
+                    margin-top: 23px;
+                }
+                &__order-btn {
+                    width: 93px;
+                    font-size: 10px;
+                    padding: 9px 0;
+                }
+            }
+            &_image{
+                display: none;
+            }
+        }
+    }
+    @media (max-width: 520px){
+        &__header{
+            justify-content: center;
+        }
+        &__logo {
+            &_img{
+                width: 60px;
+            }
+            &_name {
+                font-size: 18px;
+            }
+        }
+    }
+}

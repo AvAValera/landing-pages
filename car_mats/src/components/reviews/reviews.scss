@@ -1,0 +1,103 @@
+.reviews {
+    &__container {
+        height: 357px;
+        background: linear-gradient(
+            94.31deg,
+            rgba(212, 20, 90, 0.25) 0.96%,
+            rgba(46, 49, 146, 0.25) 104.83%
+        );
+    }
+    &__card-block {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 5%;
+        overflow-x: hidden;
+    }
+    .rev-card {
+        &__container {
+            position: relative;
+            width: 536px;
+            &_img {
+                position: absolute;
+                top: -50%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            &_description {
+                padding: 63px 44px 20px;
+                background-color: white;
+                text-align: center;
+                font-size: 18px;
+                line-height: 21px;
+                border-radius: 9px;
+            }
+            &_text {
+                height: 74px;
+            }
+            &_name{
+                font-size: 13px;
+                color: #8E8E8E;
+                &::before {
+                    content: "";
+                    display: block;
+                    margin: 10px auto 9px;
+                    width: 130px;
+                    height: 2px;
+                    border-radius: 2px;
+                    background: linear-gradient(
+                        94.31deg,
+                        #D4145A 0.96%,
+                        #3D5BF5 104.83%
+                    );
+                }
+            }
+        }
+    }
+}
+
+.reviews{
+    @media (max-width: 1195px){
+        &__container {
+            height: max-content;
+        }
+        &__card-block {
+            padding: 97px 120px 72px;
+            flex-direction: column;
+            gap: 109px;
+        }
+    }
+    @media (min-width: 1195px){
+        .reviews__card-block .rev-card:nth-child(odd){
+            opacity: 0.4;
+        }
+    }
+    @media (max-width: 540px){
+        &__card-block {
+            padding: 110px 26px 49px;
+            flex-direction: column;
+            gap: 120px;
+        }
+        .rev-card {
+            &__container {
+                position: relative;
+                width: auto;
+                &_text {
+                    height: auto;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    @media (max-width: 320px){
+        .rev-card {
+            &__container {
+                &_img {
+                    top: -40%;
+                }
+            }
+        }
+    }
+}
