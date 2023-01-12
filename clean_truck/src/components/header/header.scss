@@ -1,0 +1,16 @@
+.header{
+    &__container{
+        background: var(--bg-header-color);
+        height: 110px;
+        .row{
+            height: 100%;
+        }
+    }
+    &__location{
+        font-size: 18px;
+        color: var(--second-font-color);
+        & a{
+            font-weight: bold;
+        }
+    }
+}

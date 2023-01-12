@@ -1,0 +1,28 @@
+---
+import logo from "../../../public/img/header/logo.svg";
+import location from "../../../public/img/header/location.svg"
+import "./header.scss";
+import HeaderMenu from "./HeaderMenu.astro";
+---
+
+<header class="header">
+    
+    <div class="header__container container-fluid ">
+        <div class=" row align-items-center justify-content-center">
+            <div class="header__logo col-5">
+                <a href="/">
+                    <img src={logo} alt="logo" />
+                </a>
+            </div>
+            <div class="header__location col-5">
+                <a class="d-block" class="col-1" href="/#">
+                    <span>Локация</span>
+                    <img src={location} alt="location">
+                </a>
+                <span class="col-5">г. Городской, ул. Логистическая д. 1</span>
+            </div>
+            <div class="header__telephones col-1"></div>
+        </div>
+    </div>
+    <!-- <HeaderMenu /> -->
+</header>

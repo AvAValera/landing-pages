@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-Medium.woff') format('woff');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-Bold.woff') format('woff');
+    font-weight: bold;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', Times, serif;
+}
+a{
+    color: #00A3FF;
+    text-decoration: none;
+}
+:root{
+    --bg-header-color: #061321ea;
+    --second-font-color: #69778A
+}
