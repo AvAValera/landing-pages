@@ -1,11 +1,20 @@
 ---
-import "bootstrap/dist/css/bootstrap.min.css";
 import Layout from "../layouts/Layout.astro";
-import "../style/global.css";
 import Header from "../components/header/Header.astro";
+import HeaderMenu from "../components/header/HeaderMenu.astro";
+import Main from "../components/main/Main.astro";
 
+import "bootstrap/dist/css/bootstrap-grid.min.css";
+import "../style/top_section.scss";
+import "../style/global.css";
 ---
 
 <Layout title="Clean Truck">
-    <Header />
+    <div class="app">
+        <section class="top-section">
+            <Header />
+            <HeaderMenu />
+            <Main />
+        </section>
+    </div>
 </Layout>

@@ -1,28 +1,46 @@
 ---
 import logo from "../../../public/img/header/logo.svg";
-import location from "../../../public/img/header/location.svg"
+import logoMobile from "../../../public/img/header/logo_mobile.svg";
+import location from "../../../public/img/header/location.svg";
+import telephone from "../../../public/img/header/telephone.svg";
+import facebook from "../../../public/img/header/facebook.svg";
 import "./header.scss";
-import HeaderMenu from "./HeaderMenu.astro";
 ---
 
 <header class="header">
-    
-    <div class="header__container container-fluid ">
-        <div class=" row align-items-center justify-content-center">
-            <div class="header__logo col-5">
+    <div class="container-md">
+        <div class="header__container row align-items-center">
+            <div class="header__logo col-7 col-md-5 col-lg-4">
                 <a href="/">
-                    <img src={logo} alt="logo" />
+                    <picture>
+                        <source
+                            media="(max-width: 767.98px )"
+                            srcset={logoMobile}
+                        />
+                        <img src={logo} alt="logo" />
+                    </picture>
                 </a>
             </div>
-            <div class="header__location col-5">
-                <a class="d-block" class="col-1" href="/#">
-                    <span>Локация</span>
-                    <img src={location} alt="location">
-                </a>
-                <span class="col-5">г. Городской, ул. Логистическая д. 1</span>
+            <div class="header__location col-4 col-lg-5 d-none d-md-block ">
+                <img src={location} alt="location">
+                <a href="/#">Локация</a><br>
+                <span>г. Городской, ул. Логистическая д. 1</span>
             </div>
-            <div class="header__telephones col-1"></div>
+            <div class="header__contact col-3 col-xl-2 d-none d-md-block offset-xl-1">
+                <img src={telephone} alt="location">
+                <a href="/#">Телефон</a><br>
+                <span>+7 926 804 81 83</span>
+            </div>
+            <div class="header__social col-2 d-md-none">
+                <a href="/#">
+                    <img src={facebook} alt="facebook" />
+                </a>
+            </div>
+            <div class="header__mobile-menu col-2 d-md-none">
+                <div class="header__mobile-menu_line"></div>
+                <div class="header__mobile-menu_line"></div>
+                <div class="header__mobile-menu_line"></div>
+            </div>
         </div>
     </div>
-    <!-- <HeaderMenu /> -->
 </header>
