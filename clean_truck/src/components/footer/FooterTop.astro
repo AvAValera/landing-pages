@@ -1,0 +1,33 @@
+---
+import logo from "../../../public/img/header/logo.svg";
+import facebook from "../../../public/img/header/facebook.svg";
+import logoMobile from "../../../public/img/header/logo_mobile.svg";
+---
+
+<section>
+    <div class="footer__top">
+        <div class="container">
+            <div class="row align-items-center mb-3">
+                <div class="col-10 col-md-8">
+                    <a href="/">
+                        <picture>
+                            <source
+                                media="(max-width: 767.98px )"
+                                srcset={logoMobile}
+                            />
+                            <img src={logo} alt="logo" />
+                        </picture>
+                    </a>
+                </div>
+                <div class="footer__social col-2 col-md-4 text-end">
+                    <span class="d-none d-md-inline">Присоединяйтесь:</span>
+                    <a href="/#">
+                        <img src={facebook} alt="facebook" />
+                    </a>
+                </div>
+            </div>
+            <div class="row mx-auto col-11 col-sm-12 footer__top_line">
+            </div>
+        </div>
+    </div>
+</section>

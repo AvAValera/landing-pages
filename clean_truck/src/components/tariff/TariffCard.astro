@@ -1,0 +1,45 @@
+---
+import ok from "../../../public/img/tariff/ok.svg";
+import disabled from "../../../public/img/tariff/disabled.svg";
+import time from "../../../public/img/tariff/time.png";
+
+const tariffData = [
+    { id: 1, title: "Экспресс мойка" },
+    { id: 2, title: "Стандартная мойка" },
+    { id: 3, title: "Премиум мойка" },
+    { id: 4, title: "VIP мойка" },
+];
+---
+
+<div class="row gap-3 justify-content-center">
+    {
+        tariffData.map((el) => (
+            <div class="tariff__card  col-sm-6 ">
+                <h2>{el.title}</h2>
+                <span class="tariff__card_price">999$</span>
+                <ul>
+                    <li>
+                        <img src={ok} alt="icon" />
+                        <span>Наименнование услуги</span>
+                    </li>
+                    <li>
+                        <img src={disabled} alt="icon" />
+                        <span>Наименнование услуги</span>
+                    </li>
+                    <li>
+                        <img src={disabled} alt="icon" />
+                        <span>Наименнование услуги</span>
+                    </li>
+                    <li>
+                        <img src={disabled} alt="icon" />
+                        <span>Наименнование услуги</span>
+                    </li>
+                </ul>
+                <div class="tariff__card_time">
+                    <img src={time} alt="" />
+                    <span>15 минут</span>
+                </div>
+            </div>
+        ))
+    }
+</div>

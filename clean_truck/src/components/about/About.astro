@@ -1,0 +1,37 @@
+---
+import "./about.scss";
+import Slider from "./slider/Slider.astro";
+import More from "./more/More.astro";
+import Advantages from "./advantages/Advantages.astro";
+---
+
+<section>
+    <div class="about">
+        <Slider />
+        <More />
+        <div class="container">
+            <div class="row">
+                <h4 class="about__title col-md-8 mx-auto text-center">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Lorem mollis aliquam ut porttitor leo a diam
+                    sollicitudin tempor. Placerat vestibulum lectus mauris
+                    ultrices eros in cursus turpis massa.
+                </h4>
+            </div>
+            <div class="row col-12 about__description mx-auto text-center">
+                <span>Lorem ipsum dolor sit amet</span>
+                <h2 class="text-white text-center">Наши преимущества</h2>
+                <div class="d-flex justify-content-center">
+                    <div class="about__description_dot"></div>
+                    <div class="about__description_dot"></div>
+                    <div class="about__description_dot"></div>
+                    <div class="about__description_dot"></div>
+                    <div class="about__description_dot"></div>
+                    <div class="about__description_dot"></div>
+                </div>
+            </div>
+            <Advantages />
+        </div>
+    </div>
+</section>

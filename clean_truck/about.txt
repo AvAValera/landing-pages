@@ -1,0 +1,4 @@
+Stack:
+    astro
+    scss
+    bootstrap

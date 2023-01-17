@@ -21,14 +21,16 @@ import "./header.scss";
                     </picture>
                 </a>
             </div>
-            <div class="header__location col-4 col-lg-5 d-none d-md-block ">
-                <img src={location} alt="location">
-                <a href="/#">Локация</a><br>
+            <div class="header__location col-4 col-lg-5 d-none d-md-block">
+                <img src={location} alt="location" />
+                <a href="/#">Локация</a><br />
                 <span>г. Городской, ул. Логистическая д. 1</span>
             </div>
-            <div class="header__contact col-3 col-xl-2 d-none d-md-block offset-xl-1">
-                <img src={telephone} alt="location">
-                <a href="/#">Телефон</a><br>
+            <div
+                class="header__contact col-3 col-xl-2 d-none d-md-block offset-xl-1"
+            >
+                <img src={telephone} alt="location" />
+                <a href="/#">Телефон</a><br />
                 <span>+7 926 804 81 83</span>
             </div>
             <div class="header__social col-2 d-md-none">
@@ -36,10 +38,33 @@ import "./header.scss";
                     <img src={facebook} alt="facebook" />
                 </a>
             </div>
-            <div class="header__mobile-menu col-2 d-md-none">
+            <div class="header__mobile-menu col-2 d-md-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                 <div class="header__mobile-menu_line"></div>
                 <div class="header__mobile-menu_line"></div>
                 <div class="header__mobile-menu_line"></div>
+            </div>
+        </div>
+    </div>
+    <div
+        class="offcanvas offcanvas-end text-bg-dark"
+        tabindex="-1"
+        id="offcanvasRight"
+        aria-labelledby="offcanvasRightLabel"
+    >
+        <div class="offcanvas-header">
+            
+            <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body mx-auto">
+            <div class="mobile-menu">
+                <a  href="/#">Главная</a>
+                <a  href="#advantages">О нас</a>
+                <a  href="#tariff">Услуги и цены</a>
+                <a  href="#contact">Контакты</a>
             </div>
         </div>
     </div>

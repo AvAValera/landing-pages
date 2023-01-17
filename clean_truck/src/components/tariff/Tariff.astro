@@ -1,0 +1,34 @@
+---
+import "./tariff.scss";
+import TariffImages from "./TariffImages.astro";
+import TariffCard from "./TariffCard.astro";
+---
+
+
+<section>
+    <div class="tariff">
+        <div class="container">
+            <div class="tariff__description row text-center mx-auto">
+                <span>Услуги и цены</span>
+                <h2 class="col-5 mx-auto" id="tariff">Выберете свой план</h2>
+                <div class="tariff__dots ">
+                    <div class="tariff__dots_item"></div>
+                    <div class="tariff__dots_item"></div>
+                    <div class="tariff__dots_item"></div>
+                    <div class="tariff__dots_item"></div>
+                    <div class="tariff__dots_item"></div>
+                    <div class="tariff__dots_item"></div>
+                </div>
+                <p class="col-11 col-md-10 col-lg-8 text-lg-center mx-auto">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Lorem mollis aliquam ut porttitor leo a diam sollicitudin
+                    tempor. Placerat vestibulum lectus mauris ultrices eros in
+                    cursus turpis massa.
+                </p>
+            </div>
+            <TariffImages />
+            <TariffCard />
+        </div>
+    </div>
+</section>

@@ -1,27 +1,21 @@
-
-
 @font-face {
     font-family: "Poppins";
-    src: url("/fonts/Poppins-Medium.woff") format("woff");
+    src: url("../../public/fonts/Poppins-Light.ttf") format("ttf");
     font-weight: normal;
 }
 @font-face {
     font-family: "Poppins";
-    src: url("/fonts/Poppins-Bold.woff") format("woff");
+    src: url("../../public/fonts/Poppins-Bold.ttf") format("ttf");
     font-weight: bold;
 }
-:root {
-    --bg-header-opacity-color: #061321ea;
-    --bg-header-color: #061321;
-    --second-font-color: #69778a;
-    --main-color: #00a3ff;
-}
-* {
+*, html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 body {
+    margin: 0;
+    padding: 0;
     font-family: "Poppins", Times, serif;
 }
 a{
@@ -32,5 +26,11 @@ a:hover {
     color: var(--main-color);
 }
 .app {
-    min-width: 320px;
+    min-width: 350px;
+}
+:root {
+    --main-bg-color: #061321;
+    --bg-header-opacity-color: #061321ea;
+    --second-font-color: #69778a;
+    --main-color: #00a3ff;
 }

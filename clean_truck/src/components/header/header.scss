@@ -1,5 +1,5 @@
 .header{
-    background-color: var(--bg-header-color);
+    background-color: var(--main-bg-color);
     &__container{
         height: 60px;
     }
@@ -8,7 +8,7 @@
     }
     &__social a{
         border: 1px solid white;
-        padding: 5px 10px;
+        padding: 5px 7px;
         border-radius: 50%;
     }
     &__mobile-menu{
@@ -52,6 +52,14 @@
             padding: 14px 50px;
             border-left: 1px solid #69778A;
         }
+    }
+    
+}
+.mobile-menu{
+    a{
+        font-size: 20px;
+        display: block;
+        margin-bottom: 20px;
     }
 }
 

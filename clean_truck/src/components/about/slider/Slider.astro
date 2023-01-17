@@ -1,0 +1,51 @@
+---
+import mob1 from "../../../public/img/about/mob1.png";
+import mob2 from "../../../public/img/about/mob2.png";
+import mob3 from "../../../public/img/about/mob3.png";
+import img1 from "../../../public/img/about/img1.png";
+import img2 from "../../../public/img/about/img2.png";
+import img3 from "../../../public/img/about/img3.png";
+import arrow from "../../../public/img/about/arrow.svg";
+import SliderButtons from "./SliderButtons.astro";
+import "./slider.scss"
+---
+
+<section>
+    <div class="slider">
+        <div id="carouselExample" class="carousel slide" data-touch="true">
+            <div class="carousel-inner ">
+                <div class="carousel-item active slider__item" >
+                    <picture>
+                        <source media="(min-width: 576px)" srcset={img1}>
+                        <img src={mob1} class="d-block mx-auto" alt="..." />
+                    </picture>
+                    <div class="slider__more">
+                        <span>Подробнее</span>
+                        <img src={arrow} alt="arrow" />
+                    </div>
+                </div>
+                <div class="carousel-item slider__item">
+                    <picture>
+                        <source media="(min-width: 576px)" srcset={img2}>
+                        <img src={mob2} class="d-block mx-auto" alt="..." />
+                    </picture>
+                    <div class="slider__more">
+                        <span>Подробнее</span>
+                        <img src={arrow} alt="arrow" />
+                    </div>
+                </div>
+                <div class="carousel-item slider__item">
+                    <picture>
+                        <source media="(min-width: 576px)" srcset={img3}>
+                        <img src={mob3} class="d-block mx-auto" alt="..." />
+                    </picture>
+                    <div class="slider__more">
+                        <span>Подробнее</span>
+                        <img src={arrow} alt="arrow" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <SliderButtons />
+</section>
