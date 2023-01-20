@@ -1,0 +1,4 @@
+stack:
+    next js
+    tailwind
+    scss
