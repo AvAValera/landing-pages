@@ -26,7 +26,7 @@ export default function Layout({ title = "", children }) {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Header menu={menu} />
-            <div className="layout">{children}</div>
+                <div className="layout">{children}</div>
             <Footer menu={menu} />
         </div>
     );

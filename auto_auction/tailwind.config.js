@@ -9,6 +9,9 @@ module.exports = {
             colors: {
                 "main-color": "#3579F4",
             },
+            screens : {
+                "mob-590" : "590px"
+            }
         },
     },
     plugins: [require("@tailwindcss/forms")],
