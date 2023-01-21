@@ -8,7 +8,7 @@ export default function FirstBlock() {
 
     return (
         <div className="first-block">
-            <div className="first-block__container flex flex-col gap-5  bg-main-color rounded-t-[35px] pt-[102px] lg:rounded-t-[50px] lg:flex-row lg:gap-12 lg:items-center lg:pt-[92px] lg:pb-[134px] lg:pl-[132px]">
+            <div className="first-block__container flex flex-col gap-5  bg-main-color rounded-t-[35px] pt-[102px] pb-[80px] lg:rounded-t-[50px] lg:flex-row lg:gap-12 lg:items-center lg:pt-[92px] lg:pb-[134px] lg:pl-[132px]">
                 <div className="first-block__contacts mx-auto px-7">
                     <div className="first-block__title">
                         <h2 className="font-bold text-[34px] text-white leading-[43px] mb-5 lg:text-[46px]">Contact us</h2>

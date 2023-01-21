@@ -1,0 +1,22 @@
+.second-block {
+    @apply bg-main-color before:rounded-t-[35px] md:before:rounded-t-[50px] before:bg-[#18162D] before:w-full 
+    before:h-[50px] before:block;
+    &__container {
+        @apply bg-[#18162D] md:px-[50px] md:pt-[30px] lg:px-[130px] ;
+    }
+    &__wrapper {
+        @apply flex flex-col justify-center items-center max-w-[1366px] mx-auto
+        md:flex-row md:flex-wrap md:justify-between md:items-start;
+    }
+    &__telephone {
+        &_email {
+            @apply block text-white text-center text-[22px] font-medium mb-[17px] md:text-left;
+        }
+        &_tel {
+            @apply block text-white text-center text-[22px] font-medium md:text-left;
+        }
+    }
+    &__copyright {
+        @apply text-gray-400 max-w-[1366px] mx-auto opacity-[0.4] pb-[53px] text-center md:text-left md:pb-[40px] md:pt-[104px];
+    }
+}

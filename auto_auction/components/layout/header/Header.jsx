@@ -9,7 +9,7 @@ export default function Header({menu}) {
     
 
     return (
-        <header className="header mb-[72px] max-w-[1366px]">
+        <header className="header mb-[72px] max-w-[1366px] mx-auto">
             <div className="header__container flex justify-between items-center pt-[30px] px-[27px] lg:px-[132px]">
                 <HeaderLogo />
                 <HeaderMenu menu={menu} />
