@@ -1,0 +1,70 @@
+.card-service {
+        @apply w-[320px] h-[310px] 
+        lg:w-[258px] lg:h-[250px]
+        rounded-[20px] 
+        shadow-servshadow 
+        text-[#18162D]
+        bg-[right_50px] bg-white bg-no-repeat  hover:bg-main-color hover:text-white
+        lg:bg-[right_50px] lg:bg-[length:100%];
+    &__1 {
+        @apply w-[320px] h-[310px] 
+        lg:w-[258px] lg:h-[250px]
+        rounded-[20px] 
+        shadow-servshadow 
+        text-[#18162D]
+        bg-[right_50px] bg-white bg-no-repeat  hover:bg-main-color hover:text-white
+        lg:bg-[right_40px] lg:bg-[length:70%];
+    }
+    &__2 {
+        @apply w-[320px] h-[310px] 
+        lg:w-[258px] lg:h-[250px]
+        rounded-[20px] 
+        shadow-servshadow 
+        text-[#18162D]
+        bg-[right_50px] bg-white bg-no-repeat  hover:bg-main-color hover:text-white
+        lg:bg-[right_70px] lg:bg-[length:80%];
+    }
+    &__3 {
+        @apply w-[320px] h-[310px] 
+        lg:w-[258px] lg:h-[250px] main-1366:w-[540px]
+        rounded-[20px] 
+        shadow-servshadow 
+        text-[#18162D]
+        bg-[length:100%] bg-[70px_60px] bg-white bg-no-repeat  hover:bg-main-color hover:text-white
+        lg:bg-[60px_50px] lg:bg-[length:100%] main-1366:bg-[120px_-60px] main-1366:bg-[length:80%];
+    }
+    &__4 {
+        @apply w-[320px] h-[310px] 
+        lg:w-[258px] lg:h-[250px] main-1366:w-[540px]
+        rounded-[20px] 
+        shadow-servshadow 
+        text-[#18162D]
+        bg-[right_50px] bg-white bg-no-repeat  hover:bg-main-color hover:text-white
+        lg:bg-[right_40px] lg:bg-[length:100%] main-1366:bg-[right_-10px] main-1366:bg-[length:70%];
+        @media (min-width: 1366px) {
+            background-image: url('/img/index/services/serv4-big.png') !important;
+        }
+    }
+    &__9 {
+        @apply w-[320px] h-[310px] 
+        lg:w-[258px] lg:h-[250px] main-1366:w-[540px]
+        rounded-[20px] 
+        shadow-servshadow 
+        text-[#18162D]
+        bg-[85px_bottom] bg-[length:150%] bg-white bg-no-repeat  hover:bg-main-color hover:text-white
+        lg:bg-[90px_bottom] lg:bg-[length:130%] main-1366:bg-[right_bottom] main-1366:bg-[length:70%];
+    }
+}
+
+.description{
+    &__item-img{
+        @apply w-[85px] h-[85px] py-[20px] lg:w-[130px] lg:h-[130px] lg:py-[35px] 
+        border-[2px] rounded-full border-main-color flex-none;
+        img{
+            @apply block w-[37px] h-[37px] m-auto lg:w-[57px] lg:h-[57px] ;
+        }
+    }
+    &__line{
+        @apply w-[2px] h-[138px] bg-main-color lg:w-[201px] lg:h-[2px] flex-none;
+    }
+}

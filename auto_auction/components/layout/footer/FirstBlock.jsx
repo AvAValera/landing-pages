@@ -23,7 +23,7 @@ export default function FirstBlock() {
                         <textarea className="bg-[#5591FF] rounded-[10px] w-full min-h-[60px] max-h-28 px-[29px] pt-[19px] mb-[25px] text-white placeholder:text-white border-none" name="message" cols="30" rows="10" placeholder="Message"/>
                         <input className="bg-main-color border-white border-opacity-40 w-6 h-6 focus:ring-0 focus:ring-offset-0 mr-5 " id="policy" type="checkbox" />
                         <label className="text-white " htmlFor="policy">
-                            I agree with the Privacy policy
+                            I agree with the <span className="border-b">Privacy policy</span>
                         </label>
                         <input onClick={(e) => sendForm(e)} className="block w-full mt-[37px] py-5 bg-[#F0F0FA] text-[#8C8C8C] text-base font-bold rounded-[10px]" type="submit" value={"SEND A MESSAGE"} />
                     </form>
