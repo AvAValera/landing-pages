@@ -1,0 +1,28 @@
+.t {
+    &-main {
+        &-header{
+            @apply font-semibold text-[38px] leading-[42px] 
+            text-[#18162D] pr-[27px]
+            mb-[25px] md:text-[54px];
+        }
+        &-title{
+            @apply leading-[24px] 
+            text-[#18162D]
+            mb-[25px] md:mb-[50px] max-w-[495px];
+        }
+        &-btn {
+            &-primary {
+                @apply bg-main-color 
+                text-white text-center font-bold 
+                w-full py-6  mx-auto rounded-[10px] mob-590:w-auto mob-590:px-[60px] xl:mb-[216px];
+            }
+            &-secondary{
+                @apply text-center
+                block 
+                max-w-[312px] mx-auto 
+                text-[#8C8C8C] 
+                font-bold w-full py-6 bg-[#F0F0FA]  rounded-[10px];
+            }
+        }
+    }
+}

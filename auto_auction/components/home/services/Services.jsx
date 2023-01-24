@@ -1,11 +1,14 @@
 import CardService from "./CardService";
 import Link from "next/link";
+import {useRouter} from "next/router"
 
 export default function Services() {
 
+    const router = useRouter();
+
     const card = [
         {id: 1, imgBg: "/img/index/services/serv1.png", title: "Buying assistance", url: "/services/buying-assistance"},
-        {id: 2, imgBg: "/img/index/services/serv2.png", title: "Auto transport", url: ""},
+        {id: 2, imgBg: "/img/index/services/serv2.png", title: "Auto transport", url: "/services/auto-transport"},
         {id: 3, imgBg: "/img/index/services/serv3.png", title: "Warehousing", url: ""},
         {id: 4, imgBg: "/img/index/services/serv4.png", title: "Automobile loading", url: ""},
         {id: 5, imgBg: "/img/index/services/serv5.png", title: "Motorcycle loading", url: ""},
@@ -25,9 +28,14 @@ export default function Services() {
                             card.map(el => <CardService key={el.id} {...el} />)
                         }
                     </div>
-                    <button className="text-center block max-w-[312px] mx-auto text-[#8C8C8C] font-bold w-full py-6 bg-[#F0F0FA]  rounded-[10px]">
-                        <Link href={"/services"}>MORE ABOUT SERVICES</Link>
-                    </button>
+                    {
+                        router.route !== "/services" ? 
+                        <button className="t-main-btn-secondary">
+                            <Link href={"/services"}>MORE ABOUT SERVICES</Link>
+                        </button>
+                        :
+                        null
+                    }
                 </div>
             </div>
         </section>
