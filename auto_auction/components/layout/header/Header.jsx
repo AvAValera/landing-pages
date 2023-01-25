@@ -6,7 +6,7 @@ import HeaderMenu from "./HeaderMenu";
 import HeaderSocial from "./HeaderSocial";
 import {gsap} from "gsap";
 
-export default function Header({menu}) {
+export default function Header({menu, showMenu, setShowMenu}) {
     const tl = gsap.timeline();
     useEffect(() => {
         tl.to(".header__container",{
@@ -31,7 +31,7 @@ export default function Header({menu}) {
             <div className="header__container flex justify-between items-center pt-[30px] px-[27px] lg:px-[132px] translate-y-[-50px] opacity-0">
                 <HeaderLogo />
                 <HeaderMenu menu={menu} />
-                <MobileBtnMenu />
+                <MobileBtnMenu showMenu={showMenu} setShowMenu={setShowMenu} />
                 <HeaderSocial />
             </div>
         </header>

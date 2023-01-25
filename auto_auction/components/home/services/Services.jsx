@@ -1,6 +1,6 @@
 import CardService from "./CardService";
 import Link from "next/link";
-import {useRouter} from "next/router"
+import {useRouter} from "next/router";
 
 export default function Services() {
 
@@ -30,9 +30,9 @@ export default function Services() {
                     </div>
                     {
                         router.route !== "/services" ? 
-                        <button className="t-main-btn-secondary">
-                            <Link href={"/services"}>MORE ABOUT SERVICES</Link>
-                        </button>
+                        <Link href={"/services"}>
+                            <button className="t-main-btn-secondary">MORE ABOUT SERVICES</button>
+                        </Link>
                         :
                         null
                     }
