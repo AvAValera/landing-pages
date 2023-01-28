@@ -25,7 +25,7 @@ export default function Services() {
                     <h2 className="text-main-color text-lg mb-10 font-semibold">SERVICES WE DO</h2>
                     <div className="services__items mb-[50px] flex flex-wrap justify-center items-center gap-[25px]">
                         {
-                            card.map(el => <CardService key={el.id} {...el} />)
+                            card.map(el => <CardService  key={el.id} {...el} />)
                         }
                     </div>
                     {

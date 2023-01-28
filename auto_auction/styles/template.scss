@@ -25,4 +25,10 @@
             }
         }
     }
+    &-active-dot{
+        opacity: 1;
+    }
+    &-active-menu{
+        @apply text-main-color;
+    }
 }

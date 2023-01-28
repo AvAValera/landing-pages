@@ -1,19 +1,27 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { animLeavePage } from "@/components/layout/animation";
 
 export default function CardService({ id, imgBg, title, url = "/" }) {
+    
+    const router = useRouter();
 
     function cardClass(id) {
-        if(id === 1) return "card-service__1"
-        if(id === 2) return "card-service__2"
-        if(id === 3) return "card-service__3"
-        if(id === 4) return "card-service__4"
-        if(id === 9) return "card-service__9"
+        if (id === 1) return "card-service card-service__1";
+        if (id === 2) return "card-service card-service__2";
+        if (id === 3) return "card-service card-service__3";
+        if (id === 4) return "card-service card-service__4";
+        if (id === 9) return "card-service card-service__9";
 
-        return "card-service"
+        return "card-service";
     }
 
     return (
         <Link
+            onClick={(e) => {
+                e.preventDefault();
+                router.pathname !== url ? animLeavePage(url, router) : null
+            }}
             className={cardClass(id)}
             href={url}
             style={{ backgroundImage: `url('${imgBg}')` }}

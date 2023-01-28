@@ -1,29 +1,14 @@
-
 import {useEffect} from "react";
 import MobileBtnMenu from "./MobileBtnMenu";
 import HeaderLogo from "./HeaderLogo";
 import HeaderMenu from "./HeaderMenu";
 import HeaderSocial from "./HeaderSocial";
-import {gsap} from "gsap";
+import {animLoadPage} from "../animation"
 
 export default function Header({menu, showMenu, setShowMenu}) {
-    const tl = gsap.timeline();
+    
     useEffect(() => {
-        tl.to(".header__container",{
-            opacity: 1,
-            duration: .5,
-            y: 0,
-            delay: .5
-        })
-        tl.to(".header__menu_item",{
-            opacity: 1,
-            duration: .5,
-            stagger: .2,
-        })
-        tl.to(".header__social",{
-            opacity: 1
-        }, "<1")
-        tl.to(".header__social img",{opacity: 1})
+        animLoadPage();
     }, []);
 
     return (

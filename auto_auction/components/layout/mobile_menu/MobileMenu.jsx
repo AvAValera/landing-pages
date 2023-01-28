@@ -1,7 +1,11 @@
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+import { useRouter } from "next/router";
+import { animLeavePage } from "../animation";
 
 export default function MobileMenu({ menu, showMenu, setShowMenu }) {
+
+    const router = useRouter();
 
     function visibleMenu() {
         document.querySelector("body").style.overflow = "scroll";
@@ -45,7 +49,12 @@ export default function MobileMenu({ menu, showMenu, setShowMenu }) {
                             <nav className="flex flex-col gap-[30px] mb-[185px]">
                                 {menu.map((el) => (
                                     <Link
-                                        className="text-2xl"
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            document.querySelector("body").style.overflow = "scroll";
+                                            router.pathname !== el.url ? animLeavePage(el.url, router) : null
+                                        }}
+                                        className={router.pathname === el.url ? "t-active-menu text-2xl": "text-2xl"}
                                         href={el.url}
                                         key={el.id}
                                     >
