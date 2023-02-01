@@ -24,7 +24,7 @@ export default function Main() {
             opacity: 1
         })
         tl.to(mainContainer.current,{
-            backgroundPosition: "right 0px bottom",
+            backgroundPosition: "right 0% bottom",
             delay: 1.5,
             duration: .5
         })
@@ -71,7 +71,7 @@ export default function Main() {
 
     return (
         <main className="main  overflow-hidden">
-            <div ref={mainContainer} className="main__container ] bg-[url('/img/index/main/main-bg.png')] bg-no-repeat bg-[right_-1000px_bottom] bg-contain px-7 md:pl-[130px] mb-[80px] opacity-0">
+            <div ref={mainContainer} className="main__container ] bg-[url('/img/index/main/main-bg.png')] bg-no-repeat bg-[right_-150%_bottom] bg-contain px-7 md:pl-[130px] mb-[80px] opacity-0">
                 <h1 className="main__header text-[26px] font-light leading-9  md:text-[54px] md:leading-[61px] lg:w-2/3 xl:w-[800px] ">
                     We are an American based company professionally provide 
                 </h1>

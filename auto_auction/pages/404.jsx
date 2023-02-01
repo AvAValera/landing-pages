@@ -26,12 +26,7 @@ export default function Page404() {
                 <h3 className="page-not-found__title text-main-color text-[30px] text-center">
                     Page was deleted or not found
                 </h3>
-                <Link href={"/"}
-                    onClick={(e) => {
-                        e.preventDefault();
-                        animLeavePage("/", router)
-                    }}
-                >
+                <Link href={"/"}>
                     <button className="page-not-found__btn t-main-btn mt-[20px] px-3">
                         BACK TO MAIN PAGE
                     </button>

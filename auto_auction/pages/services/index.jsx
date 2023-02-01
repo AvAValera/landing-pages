@@ -9,6 +9,7 @@ export default function ServicesPage() {
     
     const tl = gsap.timeline()
     useEffect(() => {
+        // window.document.scrollingElement?.scrollTo(0, 0)
         tl.from(".services__main", {
             opacity: 0,
             delay: 1,
