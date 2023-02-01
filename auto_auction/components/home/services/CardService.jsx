@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import {gsap} from "gsap";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { animLeavePage } from "@/components/layout/animation";
@@ -5,6 +7,10 @@ import { animLeavePage } from "@/components/layout/animation";
 export default function CardService({ id, imgBg, title, url = "/" }) {
     
     const router = useRouter();
+
+    useEffect(() => {
+        
+    }, []);
 
     function cardClass(id) {
         if (id === 1) return "card-service card-service__1";
@@ -18,10 +24,6 @@ export default function CardService({ id, imgBg, title, url = "/" }) {
 
     return (
         <Link
-            onClick={(e) => {
-                e.preventDefault();
-                router.pathname !== url ? animLeavePage(url, router) : null
-            }}
             className={cardClass(id)}
             href={url}
             style={{ backgroundImage: `url('${imgBg}')` }}

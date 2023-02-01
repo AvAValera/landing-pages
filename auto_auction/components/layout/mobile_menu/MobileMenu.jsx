@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
-import { animLeavePage } from "../animation";
+import { animLoadContactPage } from "../animation";
 
 export default function MobileMenu({ menu, showMenu, setShowMenu }) {
 
@@ -11,6 +11,16 @@ export default function MobileMenu({ menu, showMenu, setShowMenu }) {
         document.querySelector("body").style.overflow = "scroll";
         setShowMenu(false)
     }
+
+    function activeMenu(el){
+        if(router.pathname.includes("/services/") && el.url === "/services"){
+            return "t-active-menu";
+        }
+        if(router.pathname === el.url){
+            return "t-active-menu";
+        }
+    } 
+
 
     return (
         <AnimatePresence>
@@ -48,13 +58,10 @@ export default function MobileMenu({ menu, showMenu, setShowMenu }) {
                         <menu>
                             <nav className="flex flex-col gap-[30px] mb-[185px]">
                                 {menu.map((el) => (
+                                    el.name === "CONTACTS" ? 
+                                    <span key={el.id} onClick={() => animLoadContactPage(router)} className={ `${activeMenu(el)} text-2xl text-black `} >CONTACTS</span>:
                                     <Link
-                                        onClick={(e) => {
-                                            e.preventDefault();
-                                            document.querySelector("body").style.overflow = "scroll";
-                                            router.pathname !== el.url ? animLeavePage(el.url, router) : null
-                                        }}
-                                        className={router.pathname === el.url ? "t-active-menu text-2xl": "text-2xl"}
+                                        className={`${activeMenu(el)} text-2xl`}
                                         href={el.url}
                                         key={el.id}
                                     >

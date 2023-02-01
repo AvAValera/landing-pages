@@ -11,6 +11,9 @@
             mb-[25px] md:mb-[50px] max-w-[495px];
         }
         &-btn {
+            @apply bg-main-color 
+                text-white text-center font-bold 
+                w-full py-6  mx-auto rounded-[10px] mob-590:w-auto mob-590:px-[60px] ;
             &-primary {
                 @apply bg-main-color 
                 text-white text-center font-bold 
@@ -30,5 +33,8 @@
     }
     &-active-menu{
         @apply text-main-color;
+        &-second{
+            @apply font-bold text-white;
+        }
     }
 }

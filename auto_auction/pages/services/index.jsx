@@ -22,7 +22,7 @@ export default function ServicesPage() {
     }, []);
 
     return (
-        <Layout title="services">
+        <Layout title="Services">
             <div className="services__main">
                 <div className="px-7 lg:px-[129px] max-w-[1366px] mx-auto mb-[30px]  md:mb-[50px]">
                     <h2 className="text-[38px] md:text-[54px]">Services</h2>

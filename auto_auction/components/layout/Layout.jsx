@@ -5,7 +5,7 @@ import Header from "./header/Header";
 import Footer from "./footer/Footer";
 import MobileMenu from "./mobile_menu/MobileMenu";
 
-export default function Layout({ title = "", children }) {
+export default function Layout({ title = "", children, mode = null}) {
     const menu = [
         { id: 1, url: "/", name: "HOME" },
         { id: 2, url: "/services", name: "SERVICES" },
@@ -14,10 +14,12 @@ export default function Layout({ title = "", children }) {
     const titleHead = `MDA-Shipping ${title}`;
     const mobMenu = useMediaPredicate("(max-width: 768px)");
     const [showMenu, setShowMenu] = React.useState(false)
+    
+    
     return (
         <div>
             {mobMenu && <MobileMenu menu={menu} showMenu={showMenu} setShowMenu={setShowMenu} />}
-            <div className="layout min-w-[375px] mx-auto">
+            <div className={mode === 'lite' ? "layout min-w-[375px] mx-auto bg-main-color" : "layout min-w-[375px] mx-auto"}>
                 <Head>
                     <title>{titleHead}</title>
                     <meta
@@ -30,9 +32,9 @@ export default function Layout({ title = "", children }) {
                     />
                     <link rel="icon" href="/favicon.ico" />
                 </Head>
-                <Header menu={menu} showMenu={showMenu} setShowMenu={setShowMenu} />
+                <Header menu={menu} showMenu={showMenu} setShowMenu={setShowMenu} mode={mode} />
                 <div>{children}</div>
-                <Footer menu={menu} />
+                {mode !== "lite" && <Footer menu={menu} />}
             </div>
         </div>
     );

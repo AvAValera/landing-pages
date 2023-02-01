@@ -3,7 +3,11 @@ import Main from "@/components/home/main/Main";
 import Services from "@/components/home/services/Services";
 import Description from "@/components/home/description/Description";
 
+import { animLoadPage } from "@/components/layout/animation";
+
+
 export default function Home() {
+
     return (
         <Layout title="Home">
             <Main />
