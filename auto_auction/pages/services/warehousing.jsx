@@ -1,8 +1,14 @@
+import { useEffect } from "react";
 import Layout from "@/components/layout/Layout";
 import ButtonContacts from "@/components/items/Button";
 import WarehousingCard from "@/components/services/warehousing/WarehousingCard";
 
 export default function Warehousing() {
+
+    useEffect(() => {
+        window.document.scrollingElement?.scrollTo(0, 0)
+    }, []);
+
     return (
         <Layout title="Warehousing">
             <div className="warehousing">

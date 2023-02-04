@@ -1,9 +1,10 @@
 import { useEffect } from "react";
-import { gsap } from "gsap";
+import { slideBack, slideForward, animDescription } from "../animIndexPage"; 
 
 export default function Description() {
     
     useEffect(() => {
+        animDescription();
         function resPosition(){
             document.querySelector(".description__schema").style.right = "0px";
         }
@@ -12,27 +13,7 @@ export default function Description() {
         return () => window.removeEventListener("resize", resPosition);
     }, []);
 
-    function slideBack() {
-        const schema = document.querySelector(".description__schema");
-        schema.classList.remove("description-slide");
-        
-        gsap.to(".description__schema", {
-            right: "0px",
-            duration: 1,
-            ease: "Power4.easeInOut"
-        });
-    }
     
-    function slideForward() {
-        const schema = document.querySelector(".description__schema");
-        schema.classList.add("description-slide");
-        gsap.to(".description-slide", {
-            right: 1800 - window.innerWidth + "px",
-            duration: 1,
-            ease: "Power4.easeInOut"
-        });
-    }
-
     return (
         <section>
             <div className="description mb-[110px] ">
@@ -111,7 +92,7 @@ export default function Description() {
                                 />
                             </div>
                         </div>
-                        <div className="description__text flex flex-col gap-[60px] lg:flex-row lg:gap-[45px]">
+                        <div className="description__text  flex flex-col gap-[60px] lg:flex-row lg:gap-[45px]">
                             <div className="description__text-item mt-[30px] flex-none lg:w-[283px] lg:mt-0">
                                 <h3 className="text-[22px] text-[#18162D] font-medium mb-[15px] leading-6">
                                     Bid and buy a lot

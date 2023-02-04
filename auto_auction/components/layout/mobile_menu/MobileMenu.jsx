@@ -59,8 +59,13 @@ export default function MobileMenu({ menu, showMenu, setShowMenu }) {
                             <nav className="flex flex-col gap-[30px] mb-[185px]">
                                 {menu.map((el) => (
                                     el.name === "CONTACTS" ? 
-                                    <span key={el.id} onClick={() => animLoadContactPage(router)} className={ `${activeMenu(el)} text-2xl text-black `} >CONTACTS</span>:
+                                    <span key={el.id} onClick={() => {
+                                        animLoadContactPage(router) 
+                                        visibleMenu(false)
+                                    }} 
+                                    className={ `${activeMenu(el)} text-2xl text-black `} >CONTACTS</span>:
                                     <Link
+                                    onClick={() => visibleMenu(false)}
                                         className={`${activeMenu(el)} text-2xl`}
                                         href={el.url}
                                         key={el.id}

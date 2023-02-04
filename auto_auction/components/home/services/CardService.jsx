@@ -1,16 +1,8 @@
-import { useEffect } from "react";
-import {gsap} from "gsap";
 import Link from "next/link";
-import { useRouter } from "next/router";
-import { animLeavePage } from "@/components/layout/animation";
+import  {animServicesItems} from "../animIndexPage"
 
 export default function CardService({ id, imgBg, title, url = "/" }) {
     
-    const router = useRouter();
-
-    useEffect(() => {
-        
-    }, []);
 
     function cardClass(id) {
         if (id === 1) return "card-service card-service__1";
@@ -24,11 +16,13 @@ export default function CardService({ id, imgBg, title, url = "/" }) {
 
     return (
         <Link
+        onClick={() => animServicesItems()}
+            scroll={false}
             className={cardClass(id)}
             href={url}
             style={{ backgroundImage: `url('${imgBg}')` }}
         >
-            <div>
+            <div className="">
                 <div className="card-service__container ">
                     <h2 className="text-2xl  font-bold w-[200px] pl-[26px] pt-10 ">
                         {title}

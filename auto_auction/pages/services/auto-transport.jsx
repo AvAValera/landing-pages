@@ -1,7 +1,13 @@
+import { useEffect } from "react";
 import Layout from "@/components/layout/Layout";
 import Button from "@/components/items/Button";
 
 export default function AutoTransport() {
+    
+    useEffect(() => {
+        window.document.scrollingElement?.scrollTo(0, 0)
+    }, []);
+    
     return (
         <Layout title="Auto transport">
             <div className="auto-transport">

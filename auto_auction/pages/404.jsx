@@ -10,6 +10,7 @@ export default function Page404() {
     const tl = gsap.timeline();
 
     useEffect(() => {
+        window.document.scrollingElement?.scrollTo(0, 0)
         animLoadPage();
         tl.to(".page-not-found", {opacity: 1, duration: 1, delay: .5})
         tl.from(".page-not-found__header",{opacity: 0, y: -100, duration: .5})

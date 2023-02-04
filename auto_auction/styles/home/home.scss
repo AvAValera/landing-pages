@@ -37,12 +37,12 @@
 .description{
     &__item-img{
         @apply w-[85px] h-[85px] py-[20px] lg:w-[130px] lg:h-[130px] lg:py-[35px] 
-        border-[2px] rounded-full border-main-color flex-none;
+        border-[2px] rounded-full border-main-color flex-none lg:opacity-0;
         img{
             @apply block w-[37px] h-[37px] m-auto lg:w-[57px] lg:h-[57px] ;
         }
     }
     &__line{
-        @apply w-[2px] h-[138px] bg-main-color lg:w-[201px] lg:h-[2px] flex-none;
+        @apply w-[2px] h-[138px] bg-main-color lg:w-[0px] lg:h-[2px] flex-none;
     }
 }
